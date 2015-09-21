@@ -1,0 +1,21 @@
+#version 400 core
+
+layout (location = 0) in vec3  vPosition;
+layout (location = 1) in vec3  vNormal;
+layout (location = 2) in vec2  vTexCoord;
+
+uniform mat4 mMatrix;
+uniform mat4 vMatrix;
+uniform mat4 pMatrix;
+
+out vec3 fPosition;
+out vec3 fNormal;
+out vec2 fTexCoord;
+
+void main(void)
+{
+    gl_Position = pMatrix * vMatrix * mMatrix * vec4(vPosition, 1.0);
+	fPosition = vPosition;
+	fNormal = normalize(transpose(inverse(mat3(mMatrix))) * vNormal);
+	fTexCoord = vTexCoord;
+}

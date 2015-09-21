@@ -1,0 +1,18 @@
+#version 400 core
+
+in  vec3 fPosition;
+in  vec3 fNormal;
+in  vec3 fColor;
+
+out vec4 outColor;
+
+uniform vec3 lightDirection;
+
+void main(void)
+{
+	float ambientValue = 0.4;
+    float diffuseIntensity = max(0.0, dot(fNormal, -lightDirection));
+    float diffuseValue = diffuseIntensity * 0.9;
+	
+    outColor = vec4(fColor * vec3(clamp(ambientValue+diffuseValue, 0.0, 1.0)), 1.0);		//vec4(fNormal/2.0+0.5, 1.0);
+}

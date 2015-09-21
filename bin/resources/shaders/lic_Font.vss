@@ -1,0 +1,14 @@
+#version 400 core
+
+layout (location = 0) in vec2 vPosition;
+layout (location = 1) in vec2 vTexCoord;
+
+out vec2 fTexCoord;
+
+uniform mat4 vMatrix;
+
+void main()
+{
+    gl_Position = vMatrix * vec4(vPosition, 0.0, 1.0);
+    fTexCoord = vTexCoord;
+}
