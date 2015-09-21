@@ -16,3 +16,5 @@ The tree data in `bin/resources/maps/trees.xml` is a XML file created by a PHP s
 * The possibility for rendering polygon shapes. Currently, the program only renders quadrilateral shapes and ignores polygons completely, because it doesn't know an algorithm for subdividing them into triangles yet.
 * Some nice visual effects like shadows, a sun, clouds...
 * A method that prevents many buildings from eating up gigabytes of RAM. For example, if the program loads 800 MB buildings XML data (see *Sources*) it needs ~1.5GB memory and ~1 minute to load.
+* A platform independent Makefile or something similar.
+* A directory that contains all external libraries for making it unnecessary to install them all manually (SDL, SDL_ttf, SFML, Boost, GLEW, GLM, RapidXML).
