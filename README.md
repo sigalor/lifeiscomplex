@@ -1,6 +1,7 @@
 # Description
 Life Is Complex is a program for visualizing GML data, in this case the city of Hamburg, by using various data sets.
 If you would like to add more buildings, please look at the *sources* section.
+Because the current version was developed in ~16 hours, it doesn't have much features yet (see *To do* for plans on new features and improvements).
 
 # Sources
 This project mainly uses data sets from "Transparenzportal Hamburg", a website by the city of Hamburg that provides various information and statistics about it.
@@ -17,4 +18,4 @@ The tree data in `bin/resources/maps/trees.xml` is a XML file created by a PHP s
 * Some nice visual effects like shadows, a sun, clouds...
 * A method that prevents many buildings from eating up gigabytes of RAM. For example, if the program loads 800 MB buildings XML data (see *Sources*) it needs ~1.5GB memory and ~1 minute to load.
 * A platform independent Makefile or something similar.
-* A directory that contains all external libraries for making it unnecessary to install them all manually (SDL, SDL_ttf, SFML, Boost, GLEW, GLM, RapidXML).
+* A directory that contains all external libraries for making it unnecessary to install them all manually (SDL, SDL_ttf, SFML, Boost, GLEW, GLM, RapidXML) when compiling the project.
